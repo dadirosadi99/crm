@@ -1,5 +1,8 @@
 import {
-    DashboardPage
+    DashboardPage,
+    LeadsPage,
+    CustomersPage,
+    SettingsPage
   } from './../containers'
 import { TeamOutlined, UsergroupAddOutlined, SettingOutlined, DesktopOutlined } from '@ant-design/icons';
 
@@ -13,19 +16,19 @@ export const routes = [
     {
     name: 'Leads',
       path: '/leads',
-      component: DashboardPage,
+      component: LeadsPage,
       icon: <UsergroupAddOutlined />
     },
     {
         name: 'Customers',
         path: '/customers',
-        component: DashboardPage,
+        component: CustomersPage,
         icon: <TeamOutlined />
     },
     {
         name: 'Settings',
         path: '/settings',
-        component: DashboardPage,
+        component: SettingsPage,
         icon: <SettingOutlined />
       }
   ]
