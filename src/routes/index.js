@@ -1,11 +1,10 @@
 import React, { Suspense } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import {routes} from './routes';
 import {
-  // WithSidebar,
+  MenuPage,
   SigninPage,
-  DashboardPage
-  // Dashboard,
 } from './../containers'
 
 const WithAuthenRoute = ({ component: Component, user, ...others }) => {
@@ -15,9 +14,9 @@ const WithAuthenRoute = ({ component: Component, user, ...others }) => {
       render={(props) => {
         if (user) {
           return (
-            // <WithSidebar>
+            <MenuPage>
               <Component {...props} />
-            // </WithSidebar>
+            </MenuPage>
           )
         }
         return <Redirect to='/auth/signin' />
@@ -26,12 +25,6 @@ const WithAuthenRoute = ({ component: Component, user, ...others }) => {
   )
 }
 
-const routes = [
-  {
-    path: '/dashboard',
-    component: DashboardPage,
-  },
-]
 
 const renderAuthenticatedRoute = (user) => {
   return routes.map(({ path, component }) => (
