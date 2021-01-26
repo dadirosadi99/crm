@@ -4,6 +4,7 @@ import storage from 'redux-persist/lib/storage';
 
 import authReducer from './auth/auth.reducer';
 import leadsReducer from './leads/leads.reducer';
+import customersReducer from './customers/customers.reducer';
 
 
 const persistConfig = {
@@ -14,7 +15,8 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   auth: authReducer,
-  leads: leadsReducer
+  leads: leadsReducer,
+  customers: customersReducer
 });
 
 export default persistReducer(persistConfig, rootReducer);
