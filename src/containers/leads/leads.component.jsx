@@ -17,7 +17,7 @@ const LeadsPage = () => {
     }
 
     const { TabPane } = Tabs;
-    return <Tabs defaultActiveKey="1" onChange={callback}>
+    return <Tabs defaultActiveKey="1" onChange={callback} size="large">
       <TabPane tab="Kanban Management" key="1">
         <LeadsKanbanPage />
       </TabPane>

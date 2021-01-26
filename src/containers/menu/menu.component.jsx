@@ -14,9 +14,6 @@ import './menu.styles.scss';
 
 const MenuPage = (props) => {
       const { Header, Content,Sider } = Layout;
-      console.log(
-        "PRopS", props.children.props
-      )
       return (
         <Layout>
           <Sider

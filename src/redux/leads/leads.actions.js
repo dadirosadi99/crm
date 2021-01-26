@@ -39,7 +39,7 @@ export const getLeads = () =>  {
 
       } catch (err) {
         dispatch({
-          type: LeadsActionTypes.LOGIN_FAILURE,
+          type: LeadsActionTypes.GET_DATA_LEADS_FAILURE,
           payload: err && err.response && err.response.status
         })
       }
